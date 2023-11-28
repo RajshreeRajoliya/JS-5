@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Salary</h1>
+
+<center>
+    
+<fieldset>
+    
+    <label for="">Basic Salary</label>
+    <input type="text" id="i1">
+    <br><br>
+    <label for="">HRA</label>
+    <input type="text" id="i2">
+    <br><br>
+    <label for="">Bonus</label>
+    <input type="text" id="i3">
+    <br><br>
+    <label for="">PF</label>
+    <input type="text" id="i4">
+    <br><br>
+    <h1 id="ans"></h1>
+</fieldset>
+</center>
+
+
+<h1>Swap Values</h1>
+
+
+<h1>Enter First Value</h1>
+<input type="text" id="f">
+<br><br>
+<h1>Enter Second Value</h1>
+<input type="text" id="s">
+
+<h1>Before</h1>
+<h1 id="a1"></h1>
+<h1 id="a2"></h1>
+
+<h1>After</h1>
+<h1 id="b1"></h1>
+<h1 id="b2"></h1>
+
+<h1>GRADE</h1>
+<input type="text" name="" id="gr">
+<h1 id="grade"></h1>
+</body>
+</html>
+
+<script>
+ let a = document.getElementById("i1").value;
+ let b = document.getElementById("i2").value;
+ let c = document.getElementById("i3").value;
+ let d = document.getElementById("i4").value;
+
+ let ans  = +a - +c - +d + +b;
+console.log(c)
+ document.getElementById("ans").innerText = `Your Salary is Rs : ${ans}`
+
+
+ let s1 = document.getElementById("f").value;
+ let s2 = document.getElementById("s").value;
+
+ document.getElementById("a1").innerHTML = "First value" + s1
+ 
+ document.getElementById("a2").innerHTML = "second value" + s2
+
+ document.getElementById("b1").innerHTML = "First value" + s2
+ 
+ document.getElementById("b2").innerHTML = "second value" + s1
+
+let score = document.getElementById("gr").value
+
+document.getElementById("grade").innerText = (score === 90) + "A"
+
+</script>
