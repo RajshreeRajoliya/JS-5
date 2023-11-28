@@ -6,23 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="in1">
+    <!-- <input type="text" name="" id="in1">
     <input type="text" name="" id="in2">
+    <h1 id="ans"></h1> -->
+
+    <h1>Enter Temperature</h1>
+    <input type="text" id="i1">
     <h1 id="ans"></h1>
 </body>
 </html>
 
 <script>
-   let a = document.getElementById("in1").value
-  let b =  document.getElementById("in2").value
-if(a == "" && b == ""){
-    document.getElementById("ans").innerText = "Enter Value First"
+//    let a = document.getElementById("in1").value
+//   let b =  document.getElementById("in2").value
+// if(a == "" && b == ""){
+//     document.getElementById("ans").innerText = "Enter Value First"
+// } else {
+//     if(a === b){
+// document.getElementById("ans").innerText = "Yes, Equal";
+//   } else {
+//     document.getElementById("ans").innerText = "Not, Equal";
+//   }
+// }
+
+let val = document.getElementById("i1").value
+if(val == ""){
+  document.getElementById("ans").innerText = "Enter Temperature is celcius."
 } else {
-    if(a === b){
-document.getElementById("ans").innerText = "Yes, Equal";
-  } else {
-    document.getElementById("ans").innerText = "Not, Equal";
-  }
+  if(val == 25){
+  document.getElementById("ans").innerText = "It's too hot !";
+} else {
+  document.getElementById("ans").innerText = "Not too hot !";
 }
+}
+
  
 </script>
