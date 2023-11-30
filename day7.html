@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <h11 id="ans"></h11>
+</body>
+</html>
+
+
+<script>
+    let savedPassword = 'abc@123';
+
+    let val = document.getElementById("in").value;
+
+    if(val == ""){
+        document.getElementById("ans").innerText = ""
+    } else {
+        if(savedPassword === val){
+        alert("LOGGED IN !")
+    } else {
+     let newPassword = prompt("Forgot Password ? Create New Password")
+        
+        if(newPassword.length <= 5){
+            document.getElementById("ans").innerText = "Minimum length is 5"
+        } else {
+            document.getElementById("ans").innerText = "Successfully Created new password"
+        }
+    }
+    }
+</script>
